@@ -1,0 +1,12 @@
+<svg width="280" height="50" viewBox="0 0 280 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Modern KM monogram -->
+  <g>
+    <path d="M10 10 L10 40 M10 25 L25 10 M25 10 L25 40" stroke="#FF014F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M35 10 L35 40 M35 10 L50 25 L50 10 L50 40" stroke="#FF014F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Text: Krishna Mangukiya -->
+  <text x="70" y="32" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22" font-weight="600" fill="white" letter-spacing="-0.5">
+    Krishna Mangukiya
+  </text>
+</svg>
