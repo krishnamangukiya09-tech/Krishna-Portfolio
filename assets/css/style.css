@@ -19685,6 +19685,153 @@ Section Head
   justify-content: center;
 }
 
+/* Mobile-Friendly Portfolio Grid */
+.portfolio-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+@media(min-width: 768px) {
+  .portfolio-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Ensure existing portfolio rows work well on mobile */
+@media (max-width: 767px) {
+  .latest-portfolio-area .row {
+    gap: 30px;
+  }
+  
+  .latest-portfolio-area .col-lg-6 {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .latest-portfolio-area .col-lg-6:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* About Me Section Icon Styling */
+.about-us-card .logo-img i {
+  font-size: 40px;
+  color: var(--color-primary);
+  display: block;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Expertise Section Icon Styling */
+.expertise-card-logo i {
+  font-size: 48px;
+  color: var(--color-primary);
+  display: block;
+  text-align: center;
+  line-height: 1;
+}
+
+/* Equal height skill cards and icon styling */
+.my-skill-card-style-two .my-skill-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.my-skill-card-style-two .my-skill-card .card-icon {
+  margin-bottom: 20px;
+}
+
+.my-skill-card-style-two .my-skill-card .card-icon i {
+  font-size: 48px;
+  color: var(--color-primary);
+  display: block;
+  text-align: center;
+}
+
+.my-skill-card-style-two .my-skill-card .card-title {
+  margin-bottom: 15px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.my-skill-card-style-two .my-skill-card .card-para {
+  margin-bottom: 0;
+  flex-grow: 1;
+}
+
+/* Ensure consistent card height across all screen sizes */
+@media only screen and (min-width: 768px) {
+  .my-skill-card-style-two .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .my-skill-card-style-two .col-lg-6 {
+    display: flex;
+  }
+}
+
+/* Avatar Styles for Testimonial Section */
+.client-testimonial-card-wrap .client-img .avatar-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff014f 0%, #ff014f 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(255, 1, 79, 0.3);
+  transition: all 0.3s ease;
+}
+
+.client-testimonial-card-wrap .client-img .avatar-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 1, 79, 0.4);
+}
+
+.client-testimonial-card-wrap .client-img .avatar-circle i {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.client-testimonial-card-wrap .client-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-testimonial-card-wrap .client-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.client-testimonial-card-wrap .client-img {
+  flex-shrink: 0;
+}
+
+.client-testimonial-card-wrap .client-details {
+  flex-grow: 1;
+}
+
+/* Responsive adjustments for avatars */
+@media only screen and (max-width: 767px) {
+  .client-testimonial-card-wrap .client-img .avatar-circle {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .client-testimonial-card-wrap .client-img .avatar-circle i {
+    font-size: 20px;
+  }
+  
+  .client-testimonial-card-wrap .client-info {
+    gap: 12px;
+  }
+}
+
 .client-testimonial-card-wrap .quat-logo img {
   filter: invert(1);
   max-height: 28px;
