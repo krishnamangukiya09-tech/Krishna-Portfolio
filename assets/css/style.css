@@ -14019,6 +14019,10 @@ header.header-full-width.header--sticky.sticky {
   padding-top: 120px;
 }
 
+.highlight {
+    margin: 0 6px; /* space before and after */
+}
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .tmp-banner-one-area {
     padding-bottom: 100px;
@@ -19712,6 +19716,33 @@ Section Head
   .latest-portfolio-area .col-lg-6:last-child {
     margin-bottom: 0;
   }
+}
+
+/* Expertise Progress Ring Animation */
+.progress-animate {
+  animation: progressFill 2s ease-in-out forwards;
+}
+
+@keyframes progressFill {
+  from {
+    stroke-dashoffset: 220px;
+  }
+  to {
+    stroke-dashoffset: var(--progress-offset, 22px);
+  }
+}
+
+/* Set different progress offsets for each percentage */
+.radial-progress[data-countervalue="90"] .progress-animate {
+  --progress-offset: 22px;
+}
+
+.radial-progress[data-countervalue="80"] .progress-animate {
+  --progress-offset: 44px;
+}
+
+.radial-progress[data-countervalue="75"] .progress-animate {
+  --progress-offset: 55px;
 }
 
 /* About Me Section Icon Styling */
@@ -25949,6 +25980,16 @@ body.loaded {
 
 .services-widget.v2 .service-item .expertise-card-logo {
   background: transparent !important;
+  transition: all 0.4s ease;
+}
+
+.services-widget.v2 .service-item .expertise-card-logo i {
+  color: var(--color-gray);
+  transition: all 0.4s ease;
+}
+
+.services-widget.v2 .service-item:hover .expertise-card-logo i {
+  color: var(--color-primary);
 }
 
 .services-widget.v2 .service-item .para {
@@ -25956,11 +25997,15 @@ body.loaded {
 }
 
 .services-widget.v2 .service-item.mleave .expertise-card-logo {
-  background: var(--color-primary) !important;
+  background: transparent !important;
 }
 
-.services-widget.v2 .service-item.mleave .para {
+.services-widget.v2 .service-item.mleave .expertise-card-logo i {
   color: var(--color-gray);
+}
+
+.services-widget.v2 .service-item.current .expertise-card-logo i {
+  color: var(--color-primary);
 }
 
 .services-widget.v2 .active-bg {
