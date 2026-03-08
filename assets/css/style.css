@@ -15407,6 +15407,32 @@ header.header-full-width.header--sticky.sticky {
   =====================*/
 .text-para-doc-wrap {
   position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.text-para-doc-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.text-para-doc-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(225deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .text-para-doc-wrap .text-para-documents {
@@ -15414,6 +15440,9 @@ header.header-full-width.header--sticky.sticky {
   text-align: center;
   font-family: var(--font-primary);
   font-weight: 700;
+  opacity: 0.9;
+  z-index: 1;
+  position: relative;
 }
 
 @media (min-width: 576px) {
@@ -15446,6 +15475,7 @@ header.header-full-width.header--sticky.sticky {
   top: 0;
   display: none;
   pointer-events: none;
+  z-index: 1;
 }
 
 @media (min-width: 1200px) {
@@ -15466,6 +15496,7 @@ header.header-full-width.header--sticky.sticky {
   top: 0;
   display: none;
   pointer-events: none;
+  z-index: 1;
 }
 
 @media (min-width: 1200px) {
@@ -15478,6 +15509,11 @@ header.header-full-width.header--sticky.sticky {
   .text-para-doc-wrap .left-bg-text-para {
     left: 0;
   }
+}
+
+.text-para-doc-wrap .right-bg-text-para img,
+.text-para-doc-wrap .left-bg-text-para img {
+  opacity: 0.6;
 }
 
 /*========================
@@ -21497,6 +21533,32 @@ section.clients-testimonial-area {
   =====================*/
 .text-para-doc-wrap {
   position: relative;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.text-para-doc-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.text-para-doc-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px;
+  height: 100%;
+  background: linear-gradient(225deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.05) 50%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .text-para-doc-wrap .text-para-documents {
@@ -21504,6 +21566,9 @@ section.clients-testimonial-area {
   text-align: center;
   font-family: var(--font-primary);
   font-weight: 700;
+  opacity: 0.9;
+  z-index: 1;
+  position: relative;
 }
 
 @media (min-width: 576px) {
@@ -22257,6 +22322,8 @@ section.clients-testimonial-area {
   left: 0;
   pointer-events: none;
 }
+
+
 
 .tmp-white-version.home-12 .banner-twelve-area {
   background: linear-gradient(359deg, rgb(255, 255, 255) 0%, rgba(0, 0, 0, 0) 100%) !important;
@@ -25870,10 +25937,6 @@ body.loaded {
   }
 }
 
-.inner .ft-link li span {
-  background: var(--color-primary) !important;
-}
-
 .inner .ft-link li span i {
   color: #fff;
 }
@@ -26737,6 +26800,8 @@ section.svg-container svg.radial-progress:nth-last-of-type(0) {
 
 .resume-widget .resume-single .institute {
   color: var(--color-gray);
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .resume-widget .resume-single:hover .time {
@@ -30842,7 +30907,7 @@ body.tmp-white-version.index-8 .tmp-contact-about-inner .info-box {
 }
 
 .newsletter-form-1 input::placeholder {
-  color: #FFF;
+  color: var(--color-body) !important;
   font-family: var(--font-secondary);
   font-size: 16px;
   font-weight: 400;
